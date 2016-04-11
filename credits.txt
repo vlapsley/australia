@@ -1,0 +1,14 @@
+-- Mangrove mud sounds from: http://www.freesound.org/people/dobroide/sounds/16771/ (CC by 3.0)
+-- Moss textures by Neuromancer.
+-- All tree textures by vlapsley.
+-- All plant/flower textures by vlapsley, except grass/dry_grass from default game.
+-- Bluestone textures by vlapsley.
+
+-- Original tree code adapted from Gael-de-Sailly and duane-r.
+-- Tree schematic creation code by duane-r.
+-- Ore placement code adapted from duane-r.
+
+-- noairblocks
+-- Code modified from Duane Robertson's (github duane-r) valleys_c mod. 
+-- Original code modified from Perttu Ahola's <celeron55@gmail.com> 
+-- "noairblocks" mod and released as LGPL 2.1, as the original.
