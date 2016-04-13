@@ -1,13 +1,41 @@
 -- mods/australia/craftitems.lua
 
+	-- Fiddlehead
+minetest.register_craftitem("australia:fiddlehead", {
+	description = "Fiddlehead",
+	inventory_image = "australia_fiddlehead.png",
+	on_use = minetest.item_eat(-1), -- slightly poisonous when raw
+})
+
+minetest.register_craftitem("australia:fiddlehead_roasted", {
+	description = "Roasted Fiddlehead",
+	inventory_image = "australia_fiddlehead_roasted.png",
+	on_use = minetest.item_eat(1), -- edible when cooked
+})
+
+	-- Fern tuber
+minetest.register_craftitem("australia:ferntuber", {
+	description = "Fern Tuber",
+	inventory_image = "australia_ferntuber.png",
+})
+
+minetest.register_craftitem("australia:ferntuber_roasted", {
+	description = "Roasted Fern Tuber",
+	inventory_image = "australia_ferntuber_roasted.png",
+	on_use = minetest.item_eat(3),
+})
+
+	-- Bucket muddy_water
 bucket.register_liquid(
-	"australia:muddy_water_source",
-	"australia:muddy_water_flow",
-	"australia:bucket_muddy_water",
-	"australia_bucket_muddy_water.png",
-	"Muddy Water Bucket"
+	"australia:muddy_river_water_source",
+	"australia:muddy_river_water_flowing",
+	"australia:bucket_muddy_river_water",
+	"aus_bucket_muddy_water.png",
+	"Muddy Water Bucket",
+	{water_bucket = 1}
 )
 
+	-- Stairs and slabs
 for i in ipairs(aus.treelist) do
 	local treename			= aus.treelist[i][1]
 	local treedesc			= aus.treelist[i][2]
