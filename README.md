@@ -90,7 +90,6 @@ The highest parts of the Great Dividing Range.
 * Add red terra rossa soil and grape vines in the Flinders-Lofty biome. Red/white wine.
 * Add more logs.
 * Add moss on trees.
-* Add ferns.
 * Palm trees in FNQ and Arnhem land beaches.
 * Add support for survival mod/game.
 
@@ -118,6 +117,9 @@ This will also disable plants, trees and more that are unique to that biome.
 All biomes are enabled by default. Currently, disabling the *Underground* biome will have no effect.
 
 ## Changelog
+### 0.2 (2016-04-13)
+* Added ferns.
+* Fixed muddy water bucket.
 ### 0.1 (2016-04-11)
 * 24 biomes
 * 6 new stone nodes, 4 non-stone nodes
