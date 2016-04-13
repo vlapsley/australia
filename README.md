@@ -120,6 +120,7 @@ All biomes are enabled by default. Currently, disabling the *Underground* biome 
 ### 0.2 (2016-04-13)
 * Added ferns.
 * Fixed muddy water bucket.
+
 ### 0.1 (2016-04-11)
 * 24 biomes
 * 6 new stone nodes, 4 non-stone nodes
