@@ -20,6 +20,15 @@ minetest.register_biome({
 
 
 --
+-- Register ores
+--
+
+-- All mapgens except singlenode
+-- Blob ore first to avoid other ores inside blobs
+
+
+
+--
 -- Ferns
 --
 

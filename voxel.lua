@@ -48,7 +48,7 @@ local nodes = {
 
 	-- Liquids
 	{"river_water_source", "default:river_water_source"},
-	{"dirty_river_water_source", "australia:dirty_river_water_source"},
+	{"muddy_river_water_source", "australia:muddy_river_water_source"},
 	{"water_source", "default:water_source"},
 
 	-- Air and Ignore
@@ -61,17 +61,12 @@ local nodes = {
 	{"diamond", "default:stone_with_diamond"},
 	{"gold", "default:stone_with_gold"},
 	{"iron", "default:stone_with_iron"},
+
 }
 
 for _, i in pairs(nodes) do
 	node[i[1]] = minetest.get_content_id(i[2])
 end
-
-local coal_biomes = {"victorian_forests", "great_dividing_range", "eastern_coasts"}
-local copper_biomes = {"flinders_lofty", "gulf_of_carpentaria"}
-local diamond_biomes = {"kimberley"}
-local gold_biomes = {"goldfields_esperence", "victorian_forests"}
-local iron_biomes = {"pilbara"}
 
 -- Create a table of biome ids, so I can use the biomemap.
 if not aus.biome_ids then
@@ -91,9 +86,6 @@ function aus.generate(minp, maxp, seed)
 	-- The VoxelManipulator, a complicated but speedy method to set many nodes at the same time
 	local vm, emin, emax = minetest.get_mapgen_object("voxelmanip")
 	local heightmap = minetest.get_mapgen_object("heightmap")
-	-- local heatmap = minetest.get_mapgen_object("heatmap")
-	local gennotify = minetest.get_mapgen_object("gennotify")
-	--print(dump(gennotify))
 	local water_level = 1
 
 	local data = vm:get_data() -- data is the original array of content IDs (solely or mostly air)
@@ -123,10 +115,13 @@ function aus.generate(minp, maxp, seed)
 	-- the mapgen algorithm
 	local index_2d = 0
 	local write = false
-	local relight = false
+	local index_3d, air_count, ground
+	local index_3d_below, index_3d_above, surround
+	local biome, sr
+	local stone_type, stone_depth, n23_val
 
-	for x = minp.x, maxp.x do -- for each YZ plane
-		for z = minp.z, maxp.z do -- for each vertical line in this plane
+	for z = minp.z, maxp.z do -- for each YZ plane
+		for x = minp.x, maxp.x do -- for each vertical line in this plane
 			index_2d = index_2d + 1
 
 			local index_3d = area:index(x, maxp.y, z) -- index of the data array, matching the position {x, y, z}
@@ -136,52 +131,34 @@ function aus.generate(minp, maxp, seed)
 			for y = maxp.y, minp.y, -1 do -- for each node in vertical line
 				local index_3d_below = index_3d - ystride
 				local index_3d_above = index_3d + ystride
-				local surround = true
 
 				-- Determine if a plant/dirt block can be placed without showing.
 				-- Avoid the edges of the chunk, just to make things easier.
 				if y < maxp.y and x > minp.x and x < maxp.x and z > minp.z and z < maxp.z and (data[index_3d] == node["sand"] or data[index_3d] == node["dirt"]) then
-					if data[index_3d_above] == node["river_water_source"] or data[index_3d_above] == node["water_source"] then
+					if data[index_3d_above] == node["river_water_source"] or data[index_3d_above] == node["muddy_river_water_source"] or data[index_3d_above] == node["water_source"] then
 						-- Check to make sure that a plant root is fully surrounded.
 						-- This is due to the kludgy way you have to make water plants
 						--  in minetest, to avoid bubbles.
 						for x1 = -1,1,2 do
 							local n = data[index_3d+x1] 
-							if n == node["river_water_source"] or n == node["water_source"] or n == node["air"] then
+							if n == node["river_water_source"] or n == node["muddy_river_water_source"] or n == node["water_source"] or n == node["air"] then
 								surround = false
 							end
 						end
 						for z1 = -zstride,zstride,2*zstride do
 							local n = data[index_3d+z1] 
-							if n == node["river_water_source"] or n == node["water_source"] or n == node["air"] then
+							if n == node["river_water_source"] or n == node["muddy_river_water_source"] or n == node["water_source"] or n == node["air"] then
 								surround = false
 							end
 						end
 					end
-				end
 
 				-- Extra resources in ground per biome.
-				if y < ground and (data[index_3d] == node["air"] or data[index_3d] == node["river_water_source"] or data[index_3d] == node["dirty_river_water_source"] or data[index_3d] == node["water_source"]) then
-					relight = true
-
+				if y < ground and (data[index_3d] == node["air"] or data[index_3d] == node["river_water_source"] or data[index_3d] == node["muddy_river_water_source"] or data[index_3d] == node["water_source"]) then
 					local biome = aus.biome_ids[biomemap[index_2d]]
 					local stone_type = node["stone"]
 					local stone_depth = 1
 					local n23_val = n23[index_2d] + n22[index_2d]
-					if table.contains(coal_biomes, biome) and n23_val < 0.1 then
-						stone_type = node["coalblock"]
-						stone_depth = 2
-					elseif table.contains(copper_biomes, biome) and n23_val < 0.4 then
-						stone_type = node["copper"]
-					elseif table.contains(diamond_biomes, biome) and n23_val < 0.2 then
-						stone_type = node["diamond"]
-					elseif table.contains(gold_biomes, biome) and n23_val < 0.3 then
-						stone_type = node["gold"]
-					elseif table.contains(iron_biomes, biome) and n23_val < 0.6 then
-						stone_type = node["iron"]
-					else
-						stone_type = node["stone"]
-					end
 
 					-- Change stone per biome.
 					if data[index_3d_below] == node["stone"] then
@@ -219,16 +196,8 @@ function aus.generate(minp, maxp, seed)
 	end
 
 	if write then
-		-- probably not necessary
-		if relight then
-			--vm:set_lighting({day = 10, night = 10})
-		end
-
 		-- This seems to be necessary to avoid lighting problems.
 		vm:calc_lighting()
-
-		-- probably not necessary
-		--vm:update_liquids()
 	end
 
 	if write then
@@ -245,5 +214,4 @@ end
 
 
 -- Call the mapgen function aus.generate on mapgen.
---  (located in voxel.lua)
 minetest.register_on_generated(aus.generate)

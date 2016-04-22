@@ -3,25 +3,25 @@
 	-- Fiddlehead
 minetest.register_craftitem("australia:fiddlehead", {
 	description = "Fiddlehead",
-	inventory_image = "australia_fiddlehead.png",
+	inventory_image = "aus_fiddlehead.png",
 	on_use = minetest.item_eat(-1), -- slightly poisonous when raw
 })
 
 minetest.register_craftitem("australia:fiddlehead_roasted", {
 	description = "Roasted Fiddlehead",
-	inventory_image = "australia_fiddlehead_roasted.png",
+	inventory_image = "aus_fiddlehead_roasted.png",
 	on_use = minetest.item_eat(1), -- edible when cooked
 })
 
 	-- Fern tuber
 minetest.register_craftitem("australia:ferntuber", {
 	description = "Fern Tuber",
-	inventory_image = "australia_ferntuber.png",
+	inventory_image = "aus_ferntuber.png",
 })
 
 minetest.register_craftitem("australia:ferntuber_roasted", {
 	description = "Roasted Fern Tuber",
-	inventory_image = "australia_ferntuber_roasted.png",
+	inventory_image = "aus_ferntuber_roasted.png",
 	on_use = minetest.item_eat(3),
 })
 

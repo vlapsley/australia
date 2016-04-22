@@ -21,6 +21,36 @@ minetest.register_biome({
 
 
 --
+-- Register ores
+--
+
+-- All mapgens except singlenode
+-- Blob ore first to avoid other ores inside blobs
+
+	-- Copper
+minetest.register_ore({
+	ore_type        = "blob",
+	ore             = "default:stone_with_copper",
+	wherein         = {"default:stone"},
+	clust_scarcity  = 44 * 44 * 44,
+	clust_size      = 8,
+	biomes          = {"gulf_of_carpentaria"},
+	y_min           = -64,
+	y_max           = 0,
+	noise_threshold = 1,
+	noise_params    = {
+		offset = 0,
+		scale = 3,
+		spread = {x = 16, y = 16, z = 16},
+		seed = 890,
+		octaves = 3,
+		persist = 0.6
+	},
+})
+
+
+
+--
 -- Decorations
 --
 

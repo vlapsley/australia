@@ -4,9 +4,9 @@ minetest.register_biome({
 	name = "mangroves",
 	--node_dust = "",
 	node_top = "australia:mangrove_mud",
-	depth_top = 2,
-	node_filler = "default:dirt",
-	depth_filler = 2,
+	depth_top = 3,
+	node_filler = "default:clay",
+	depth_filler = 1,
 	--node_stone = "",
 	--node_water_top = "",
 	--depth_water_top = ,
@@ -19,6 +19,19 @@ minetest.register_biome({
 })
 
 
+
+--
+-- Register ores
+--
+
+-- All mapgens except singlenode
+-- Blob ore first to avoid other ores inside blobs
+
+
+
+--
+-- Decorations
+--
 
 	-- Mangrove Fern
 minetest.register_decoration({

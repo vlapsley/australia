@@ -53,6 +53,52 @@ minetest.register_node("australia:bluestone_brick", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
+minetest.register_node("australia:coral_stone_cauliflower_brown", {
+	description = "Sea coral stone",
+	tiles = {"aus_coral_stone.png"},
+	is_ground_content = true,
+	groups = {cracky=3, stone=1, not_in_creative_inventory=1},
+	drop = 'default:stone',
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("australia:coral_stone_cauliflower_green", {
+	description = "Sea coral stone",
+	tiles = {"aus_coral_stone.png"},
+	is_ground_content = true,
+	groups = {cracky=3, stone=1, not_in_creative_inventory=1},
+	drop = 'default:stone',
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("australia:coral_stone_cauliflower_pink", {
+	description = "Sea coral stone",
+	tiles = {"aus_coral_stone.png"},
+	is_ground_content = true,
+	groups = {cracky=3, stone=1, not_in_creative_inventory=1},
+	drop = 'default:stone',
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("australia:stone_kelp_brown", {
+	description = "Sea stone",
+	tiles = {"aus_coral_stone.png"},
+	is_ground_content = true,
+	groups = {cracky=3, stone=1, not_in_creative_inventory=1},
+	drop = 'default:stone',
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("australia:stone_kelp_giant_brown", {
+	description = "Sea stone",
+	tiles = {"aus_coral_stone.png"},
+	is_ground_content = true,
+	groups = {cracky=3, stone=1, not_in_creative_inventory=1},
+	drop = 'default:stone',
+	sounds = default.node_sound_stone_defaults(),
+})
+
+
 
 --
 -- Soft / Non-Stone
@@ -90,6 +136,42 @@ minetest.register_node("australia:mangrove_mud", {
 		footstep = {name="aus_mangrove_mud", gain=0.4},
 		dug = {name="aus_mangrove_mud", gain=0.4},
 	}),
+})
+
+minetest.register_node("australia:coral_sand_staghorn_blue", {
+	description = "Sea coral sand",
+	tiles = {"aus_coral_sand.png"},
+	is_ground_content = true,
+	groups = {crumbly=3, falling_node=1, sand=1, soil=1, not_in_creative_inventory=1},
+	drop = 'default:sand',
+	sounds = default.node_sound_sand_defaults(),
+})
+
+minetest.register_node("australia:coral_sand_staghorn_pink", {
+	description = "Sea coral sand",
+	tiles = {"aus_coral_sand.png"},
+	is_ground_content = true,
+	groups = {crumbly=3, falling_node=1, sand=1, soil=1, not_in_creative_inventory=1},
+	drop = 'default:sand',
+	sounds = default.node_sound_sand_defaults(),
+})
+
+minetest.register_node("australia:coral_sand_staghorn_purple", {
+	description = "Sea coral sand",
+	tiles = {"aus_coral_sand.png"},
+	is_ground_content = true,
+	groups = {crumbly=3, falling_node=1, sand=1, soil=1, not_in_creative_inventory=1},
+	drop = 'default:sand',
+	sounds = default.node_sound_sand_defaults(),
+})
+
+minetest.register_node("australia:coral_sand_staghorn_yellow", {
+	description = "Sea coral sand",
+	tiles = {"aus_coral_sand.png"},
+	is_ground_content = true,
+	groups = {crumbly=3, falling_node=1, sand=1, soil=1, not_in_creative_inventory=1},
+	drop = 'default:sand',
+	sounds = default.node_sound_sand_defaults(),
 })
 
 
@@ -843,41 +925,179 @@ minetest.register_node("australia:waratah", {
 	sounds = default.node_sound_leaves_defaults(),
 })
 
-	-- Acropora cervicornis: Staghorn Coral (yellow)
-minetest.register_node("australia:staghorn_coral_yellow", {
-	description = "Acropora cervicornis: Staghorn Coral",
+	-- Ecklonia radiata: Common Kelp
+minetest.register_node("australia:kelp_brown", {
+	description = "Ecklonia radiata: Common Kelp",
 	drawtype = "plantlike",
-	waving = 0,
-	visual_scale = 1.0,
-	tiles = {"aus_staghorn_coral_yellow.png"},
-	inventory_image = "aus_staghorn_coral_yellow.png",
-	wield_image = "aus_staghorn_coral_yellow.png",
+	waving = 1,
+	tiles = {"aus_kelp_brown.png"},
+	inventory_image = "aus_kelp_brown.png",
+	wield_image = "aus_kelp_brown.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	buildable_to = false,
-	groups = {cracky = 3, stone=1, attached_node=1, sea=1},
-	sounds = default.node_sound_stone_defaults(),
+	climable = true,
+	drowning = 1,
+	is_ground_content = true,
+	groups = {snappy=3, seaplants=1, sea=1},
+	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
 	},
 })
 
-	-- Acropora cervicornis: Staghorn Coral (purple)
-minetest.register_node("australia:staghorn_coral_purple", {
+	-- Macrocystis pyrifera: Giant Kelp
+minetest.register_node("australia:kelp_giant_brown", {
+	description = "Giant Kelp ",
+	drawtype = "plantlike",
+	tiles = {"aus_kelp_giant_brown.png"},
+	inventory_image = "aus_kelp_giant_brown.png",
+	wield_image = "aus_kelp_giant_brown.png",
+	paramtype = "light",
+	walkable = false,
+	climbable = true,
+	drowning = 1,
+	is_ground_content = true,
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.3, -0.5, -0.3, 0.3, 0.3, 0.3}
+	},
+	post_effect_color = {a=64, r=100, g=100, b=200},
+	groups = {snappy=3, seaplants=1, sea=1},
+	sounds = default.node_sound_leaves_defaults(),
+	on_use = minetest.item_eat(1)
+})
+
+minetest.register_node("australia:kelp_giant_brown_middle", {
+	description = "Giant Kelp middle",
+	drawtype = "plantlike",
+	tiles = {"aus_kelp_giant_brown_middle.png"},
+	inventory_image = "aus_kelp_giant_brown_middle.png",
+	wield_image = "aus_kelp_giant_brown_middle.png",
+	paramtype = "light",
+	walkable = false,
+	climbable = true,
+	drowning = 1,
+	is_ground_content = true,
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}
+	},
+	post_effect_color = {a=64, r=100, g=100, b=200},
+	groups = {snappy=3, seaplants=1, sea=1},
+	drop = "australia:kelp_giant_brown",
+	sounds = default.node_sound_leaves_defaults(),
+})
+
+	-- Dipsastraea speciosa: Brain Coral
+minetest.register_node("australia:brain_coral", {
+	description = "Dipsastraea speciosa: Brain Coral",
+	drawtype = "nodebox",
+	paramtype = "light",
+	tiles = {
+		"aus_brain_coral.png",
+		"aus_brain_coral.png",
+		"aus_brain_coral.png",
+		"aus_brain_coral.png",
+		"aus_brain_coral.png",
+		"aus_brain_coral.png"
+	},
+	inventory_image = { "aus_brain_coral.png"},
+	wield_image = { "aus_brain_coral.png"},
+	is_ground_content = true,
+	groups = {cracky = 3, coral = 1, stone = 1, attached_node = 1, sea = 1},
+	sounds = default.node_sound_leaves_defaults(),
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.125, -0.5, -0.125, 0.125, 0.5, 0.125},
+			{-0.1875, -0.5, -0.1875, 0.1875, 0.4375, 0.1875},
+			{-0.25, -0.5, -0.25, 0.25, 0.375, 0.25},
+			{-0.3125, -0.5, -0.3125, 0.3125, 0.3125, 0.3125},
+			{-0.375, -0.5, -0.375, 0.375, 0.25, 0.375},
+			{-0.4375, -0.4375, -0.4375, 0.4375, 0.1875, 0.4375},
+			{-0.5, -0.375, -0.5, 0.5, 0.125, 0.5},
+		}
+	},
+})
+
+	-- Pocillopora damicornis: Cauliflower Coral (brown)
+minetest.register_node("australia:cauliflower_coral_brown", {
+	description = "Pocillopora damicornis: Cauliflower Coral",
+	drawtype = "plantlike",
+	visual_scale = 0.75,
+	tiles = { "aus_cauliflower_coral_brown.png"},
+	inventory_image = { "aus_cauliflower_coral_brown.png"},
+	wield_image = { "aus_cauliflower_coral_brown.png"},
+	paramtype = "light",
+	walkable = false,
+	climable = true,
+	drowning = 1,
+	is_ground_content = true,
+	groups = {cracky = 3, coral = 1, stone = 1, attached_node = 1, sea = 1},
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+	},
+})
+
+	-- Pocillopora damicornis: Cauliflower Coral (green)
+minetest.register_node("australia:cauliflower_coral_green", {
+	description = "Pocillopora damicornis: Cauliflower Coral",
+	drawtype = "plantlike",
+	visual_scale = 0.75,
+	tiles = { "aus_cauliflower_coral_green.png"},
+	inventory_image = { "aus_cauliflower_coral_green.png"},
+	wield_image = { "aus_cauliflower_coral_green.png"},
+	paramtype = "light",
+	walkable = false,
+	climable = true,
+	drowning = 1,
+	is_ground_content = true,
+	groups = {cracky = 3, coral = 1, stone = 1, attached_node = 1, sea = 1},
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+	},
+})
+
+	-- Pocillopora damicornis: Cauliflower Coral (pink)
+minetest.register_node("australia:cauliflower_coral_pink", {
+	description = "Pocillopora damicornis: Cauliflower Coral",
+	drawtype = "plantlike",
+	visual_scale = 0.75,
+	tiles = { "aus_cauliflower_coral_pink.png"},
+	inventory_image = { "aus_cauliflower_coral_pink.png"},
+	wield_image = { "aus_cauliflower_coral_pink.png"},
+	paramtype = "light",
+	walkable = false,
+	climable = true,
+	drowning = 1,
+	is_ground_content = true,
+	groups = {cracky = 3, coral = 1, stone = 1, attached_node = 1, sea = 1},
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+	},
+})
+
+	-- Acropora cervicornis: Staghorn Coral (blue)
+minetest.register_node("australia:staghorn_coral_blue", {
 	description = "Acropora cervicornis: Staghorn Coral",
 	drawtype = "plantlike",
-	waving = 0,
-	visual_scale = 1.0,
-	tiles = {"aus_staghorn_coral_purple.png"},
-	inventory_image = "aus_staghorn_coral_purple.png",
-	wield_image = "aus_staghorn_coral_purple.png",
+	tiles = {"aus_staghorn_coral_blue.png"},
+	inventory_image = "aus_staghorn_coral_blue.png",
+	wield_image = "aus_staghorn_coral_blue.png",
 	paramtype = "light",
-	sunlight_propagates = true,
 	walkable = false,
-	buildable_to = false,
-	groups = {cracky = 3, stone=1, attached_node=1, sea=1},
+	climable = true,
+	drowning = 1,
+	is_ground_content = true,
+	groups = {cracky = 3, coral = 1, stone = 1, attached_node = 1, sea = 1},
 	sounds = default.node_sound_stone_defaults(),
 	selection_box = {
 		type = "fixed",
@@ -897,8 +1117,11 @@ minetest.register_node("australia:staghorn_coral_pink", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	climable = true,
 	buildable_to = false,
-	groups = {cracky = 3, stone=1, attached_node=1, sea=1},
+	drowning = 1,
+	is_ground_content = true,
+	groups = {cracky = 3, coral = 1, stone = 1, attached_node = 1, sea = 1},
 	sounds = default.node_sound_stone_defaults(),
 	selection_box = {
 		type = "fixed",
@@ -906,26 +1129,54 @@ minetest.register_node("australia:staghorn_coral_pink", {
 	},
 })
 
-	-- Acropora cervicornis: Staghorn Coral (blue)
-minetest.register_node("australia:staghorn_coral_blue", {
+	-- Acropora cervicornis: Staghorn Coral (purple)
+minetest.register_node("australia:staghorn_coral_purple", {
 	description = "Acropora cervicornis: Staghorn Coral",
 	drawtype = "plantlike",
 	waving = 0,
 	visual_scale = 1.0,
-	tiles = {"aus_staghorn_coral_blue.png"},
-	inventory_image = "aus_staghorn_coral_blue.png",
-	wield_image = "aus_staghorn_coral_blue.png",
+	tiles = {"aus_staghorn_coral_purple.png"},
+	inventory_image = "aus_staghorn_coral_purple.png",
+	wield_image = "aus_staghorn_coral_purple.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	climable = true,
 	buildable_to = false,
-	groups = {cracky = 3, stone=1, attached_node=1, sea=1},
+	drowning = 1,
+	is_ground_content = true,
+	groups = {cracky = 3, coral = 1, stone = 1, attached_node = 1, sea = 1},
 	sounds = default.node_sound_stone_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
 	},
 })
+
+	-- Acropora cervicornis: Staghorn Coral (yellow)
+minetest.register_node("australia:staghorn_coral_yellow", {
+	description = "Acropora cervicornis: Staghorn Coral",
+	drawtype = "plantlike",
+	waving = 0,
+	visual_scale = 1.0,
+	tiles = {"aus_staghorn_coral_yellow.png"},
+	inventory_image = "aus_staghorn_coral_yellow.png",
+	wield_image = "aus_staghorn_coral_yellow.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = false,
+	climable = true,
+	buildable_to = false,
+	drowning = 1,
+	is_ground_content = true,
+	groups = {cracky = 3, coral = 1, stone = 1, attached_node = 1, sea = 1},
+	sounds = default.node_sound_stone_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+	},
+})
+
 
 
 --
@@ -958,7 +1209,7 @@ minetest.register_node("australia:muddy_river_water_source", {
 			backface_culling = false,
 		},
 	},
-	alpha = 160,
+	alpha = 224,
 	paramtype = "light",
 	walkable = false,
 	pointable = false,
@@ -971,9 +1222,9 @@ minetest.register_node("australia:muddy_river_water_source", {
 	liquid_alternative_flowing = "australia:muddy_river_water_flowing",
 	liquid_alternative_source = "australia:muddy_river_water_source",
 	liquid_viscosity = 1,
-	liquid_renewable = false,
-	liquid_range = 2,
-	post_effect_color = {a = 64, r = 200, g = 150, b = 100},
+	liquid_renewable = true,
+	liquid_range = 3,
+	post_effect_color = {a = 232, r = 92, g = 80, b = 48},
 	groups = {water = 3, liquid = 3, puts_out_fire = 1},
 })
 
@@ -1003,7 +1254,7 @@ minetest.register_node("australia:muddy_river_water_flowing", {
 			},
 		},
 	},
-	alpha = 160,
+	alpha = 224,
 	paramtype = "light",
 	paramtype2 = "flowingliquid",
 	walkable = false,
@@ -1017,9 +1268,9 @@ minetest.register_node("australia:muddy_river_water_flowing", {
 	liquid_alternative_flowing = "australia:muddy_river_water_flowing",
 	liquid_alternative_source = "australia:muddy_river_water_source",
 	liquid_viscosity = 1,
-	liquid_renewable = false,
-	liquid_range = 2,
-	post_effect_color = {a = 64, r = 200, g = 150, b = 100},
+	liquid_renewable = true,
+	liquid_range = 3,
+	post_effect_color = {a = 232, r = 92, g = 80, b = 48},
 	groups = {water = 3, liquid = 3, puts_out_fire = 1,
 		not_in_creative_inventory = 1},
 })

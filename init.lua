@@ -49,11 +49,12 @@ aus.biome_australian_alps			= 1
 -- Load files
 dofile(aus.path .. "/functions.lua")
 dofile(aus.path .. "/nodes.lua")
+dofile(aus.path .. "/noairblocks.lua")
 dofile(aus.path .. "/craftitems.lua")
 dofile(aus.path .. "/crafting.lua")
 dofile(aus.path .. "/trees.lua")
 dofile(aus.path .. "/mapgen.lua")
 dofile(aus.path .. "/saplings.lua")
-dofile(aus.path .. "/voxel.lua")
+--dofile(aus.path .. "/voxel.lua")
 
 minetest.log("MOD: Australia loaded")

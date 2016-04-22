@@ -1,6 +1,6 @@
 # Australia
 A mod for Minetest 0.4.13-dev. Work in progress.
-Created by vlapsley. See *credits.txt* for all acknowledgements.
+Created by vlapsley.
 
 ![Screenshot](https://raw.githubusercontent.com/vlapsley/australia/master/screenshot.png)
 
@@ -17,7 +17,7 @@ Stone. No change from the default game.
 #### Mangroves
 The mangroves of Queensland and Northern Territory. Watch out for crocodiles!
 #### Tasman Sea
-Beautiful sandy beaches.
+Beautiful sandy beaches. You will find lots of Brown and Giant Kelp.
 #### Great Australian Bight
 Sandstone cliffs and wild ocean.
 #### Indian Ocean
@@ -75,14 +75,11 @@ The area is extremely hot and dry. Famous for it's red sand dunes.
 The highest parts of the Great Dividing Range.
 
 ## To-do list
-* Fix no-air blocks for Great Barrier Reef.
 * Redo some tree textures, especially wood. Some of them are great, some are awful.
-* Fix ore distribution.
 * Finish corals in Great Barrier Reef.
 * Opals in Central Australia biome.
 * Work out way to place some tree and plants along rivers.
 * Salt lakes in Central Australia biome.
-* Uranium? Silver? Potential support for technic mod
 * Adjust tree and plant distribution.
 * Adjust tree size and leaf functions.
 * Add some rocky beaches.
@@ -117,6 +114,16 @@ This will also disable plants, trees and more that are unique to that biome.
 All biomes are enabled by default. Currently, disabling the *Underground* biome will have no effect.
 
 ## Changelog
+### 0.3.1 (2016-04-22)
+* Changed ore distribution to use minetest.register_ore function.
+* Added uranium in two biomes if technic_worldgen mod is enabled.
+* Added 4 new corals to the Great Barrier Reef biome.
+* Added Brown and Giant Kelp to some ocean biomes.
+* Changed muddy river water opacity. It's now much harder to see underwater in these rivers.
+* Removed necessity to use voxel manipulator, voxel.lua file.
+* Fixed noairblocks.
+* Fixed a naming issue with some fern textures, credit: Napiophelios.
+
 ### 0.2 (2016-04-13)
 * Added ferns.
 * Fixed muddy water bucket.
@@ -128,3 +135,19 @@ All biomes are enabled by default. Currently, disabling the *Underground* biome 
 * 48 trees
 * 10 plants
 * 4 corals
+
+## Credits
+### Code
+* Original tree code adapted from Gael-de-Sailly [GNU GPLv3](http://www.gnu.org/licenses/gpl-3.0.en.html), original source can be found at [](https://github.com/Gael-de-Sailly/valleys_mapgen) and duane-r [BSD license](https://en.wikipedia.org/wiki/Bsd_license).
+* Tree schematic creation code by duane-r [BSD license](https://en.wikipedia.org/wiki/Bsd_license).
+* noairblocks.lua : Code modified from Duane Robertson's [valleys_c](https://github.com/duane-r/valleys_c) mod. Original code modified from Perttu Ahola's [noairblocks](https://forum.minetest.net/viewtopic.php?id=4627) mod and released as LGPL 2.1.
+
+### Sounds
+* [Mangrove mud](http://www.freesound.org/people/dobroide/sounds/16771) copyright (C) 2006 by dobroide, [CC by 3.0](https://creativecommons.org/licenses/by/3.0/legalcode)
+
+### Textures
+* Moss textures by Neuromancer, [WTFPL](https://en.wikipedia.org/wiki/WTFPL).
+* Fern textures by Mossmanikin, [WTFPL](https://en.wikipedia.org/wiki/WTFPL).
+* Giant Kelp textures copyright (C) 2012 by Perttu Ahola, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/legalcode).
+* Coral sand by duane-r [BSD license](https://en.wikipedia.org/wiki/Bsd_license).
+* All other textures by demon_boy [github](https://github.com/vlapsley), except those from default game.
