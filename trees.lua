@@ -5,7 +5,7 @@ function aus.generate_rainforest_tree_schematic(trunk_height, r, trunk, leaf)
 	local height = trunk_height * 2 + 1
 	local radius = r
 	local width = 2 * radius + 1
-	local trunk_top = height - 3
+	local trunk_top = height - 4
 	local s = aus.schematic_array(width, height, width)
 
 -- roots, trunk, and extra leaves
@@ -30,7 +30,7 @@ function aus.generate_rainforest_tree_schematic(trunk_height, r, trunk, leaf)
 	end
 
 -- canopy
-	for y = 1,trunk_top+4 do
+	for y = 1,trunk_top+3 do
 		if y > trunk_height and (y == trunk_top or math.random(1,height - y) == 1) then
 			local x, z = 0, 0
 			while x == 0 and z == 0 do

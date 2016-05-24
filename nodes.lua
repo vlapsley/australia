@@ -53,6 +53,69 @@ minetest.register_node("australia:bluestone_brick", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
+minetest.register_node("australia:coral_stone_brain", {
+	description = "Sea coral stone",
+	tiles = {"aus_coral_stone.png"},
+	is_ground_content = true,
+	groups = {cracky=3, stone=1, not_in_creative_inventory=1},
+	drop = 'default:stone',
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("australia:coral_stone_cluster_green", {
+	description = "Sea coral stone",
+	tiles = {"aus_coral_stone.png"},
+	is_ground_content = true,
+	groups = {cracky=3, stone=1, not_in_creative_inventory=1},
+	drop = 'default:stone',
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("australia:coral_stone_cluster_orange", {
+	description = "Sea coral stone",
+	tiles = {"aus_coral_stone.png"},
+	is_ground_content = true,
+	groups = {cracky=3, stone=1, not_in_creative_inventory=1},
+	drop = 'default:stone',
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("australia:coral_stone_cluster_purple", {
+	description = "Sea coral stone",
+	tiles = {"aus_coral_stone.png"},
+	is_ground_content = true,
+	groups = {cracky=3, stone=1, not_in_creative_inventory=1},
+	drop = 'default:stone',
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("australia:coral_stone_hammer", {
+	description = "Sea coral stone",
+	tiles = {"aus_coral_stone.png"},
+	is_ground_content = true,
+	groups = {cracky=3, stone=1, not_in_creative_inventory=1},
+	drop = 'default:stone',
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("australia:coral_stone_seafan", {
+	description = "Sea coral stone",
+	tiles = {"aus_coral_stone.png"},
+	is_ground_content = true,
+	groups = {cracky=3, stone=1, not_in_creative_inventory=1},
+	drop = 'default:stone',
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("australia:coral_stone_tube_sponge", {
+	description = "Sea coral stone",
+	tiles = {"aus_coral_stone.png"},
+	is_ground_content = true,
+	groups = {cracky=3, stone=1, not_in_creative_inventory=1},
+	drop = 'default:stone',
+	sounds = default.node_sound_stone_defaults(),
+})
+
 minetest.register_node("australia:coral_stone_cauliflower_brown", {
 	description = "Sea coral stone",
 	tiles = {"aus_coral_stone.png"},
@@ -72,6 +135,42 @@ minetest.register_node("australia:coral_stone_cauliflower_green", {
 })
 
 minetest.register_node("australia:coral_stone_cauliflower_pink", {
+	description = "Sea coral stone",
+	tiles = {"aus_coral_stone.png"},
+	is_ground_content = true,
+	groups = {cracky=3, stone=1, not_in_creative_inventory=1},
+	drop = 'default:stone',
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("australia:coral_stone_staghorn_blue", {
+	description = "Sea coral stone",
+	tiles = {"aus_coral_stone.png"},
+	is_ground_content = true,
+	groups = {cracky=3, stone=1, not_in_creative_inventory=1},
+	drop = 'default:stone',
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("australia:coral_stone_staghorn_pink", {
+	description = "Sea coral stone",
+	tiles = {"aus_coral_stone.png"},
+	is_ground_content = true,
+	groups = {cracky=3, stone=1, not_in_creative_inventory=1},
+	drop = 'default:stone',
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("australia:coral_stone_staghorn_purple", {
+	description = "Sea coral stone",
+	tiles = {"aus_coral_stone.png"},
+	is_ground_content = true,
+	groups = {cracky=3, stone=1, not_in_creative_inventory=1},
+	drop = 'default:stone',
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("australia:coral_stone_staghorn_yellow", {
 	description = "Sea coral stone",
 	tiles = {"aus_coral_stone.png"},
 	is_ground_content = true,
@@ -138,43 +237,21 @@ minetest.register_node("australia:mangrove_mud", {
 	}),
 })
 
-minetest.register_node("australia:coral_sand_staghorn_blue", {
-	description = "Sea coral sand",
-	tiles = {"aus_coral_sand.png"},
+minetest.register_node("australia:woodship", {
+	description = "Sand for the wooden ship",
+	tiles = {"default_sand.png"},
 	is_ground_content = true,
 	groups = {crumbly=3, falling_node=1, sand=1, soil=1, not_in_creative_inventory=1},
-	drop = 'default:sand',
 	sounds = default.node_sound_sand_defaults(),
 })
 
-minetest.register_node("australia:coral_sand_staghorn_pink", {
-	description = "Sea coral sand",
-	tiles = {"aus_coral_sand.png"},
+minetest.register_node("australia:submarine", {
+	description = "Dirt for the submarine",
+	tiles = {"default_dirt.png"},
 	is_ground_content = true,
-	groups = {crumbly=3, falling_node=1, sand=1, soil=1, not_in_creative_inventory=1},
-	drop = 'default:sand',
-	sounds = default.node_sound_sand_defaults(),
+	groups = {crumbly=3,soil=1, not_in_creative_inventory=1},
+	sounds = default.node_sound_dirt_defaults(),
 })
-
-minetest.register_node("australia:coral_sand_staghorn_purple", {
-	description = "Sea coral sand",
-	tiles = {"aus_coral_sand.png"},
-	is_ground_content = true,
-	groups = {crumbly=3, falling_node=1, sand=1, soil=1, not_in_creative_inventory=1},
-	drop = 'default:sand',
-	sounds = default.node_sound_sand_defaults(),
-})
-
-minetest.register_node("australia:coral_sand_staghorn_yellow", {
-	description = "Sea coral sand",
-	tiles = {"aus_coral_sand.png"},
-	is_ground_content = true,
-	groups = {crumbly=3, falling_node=1, sand=1, soil=1, not_in_creative_inventory=1},
-	drop = 'default:sand',
-	sounds = default.node_sound_sand_defaults(),
-})
-
-
 
 --
 -- Trees
@@ -1085,6 +1162,66 @@ minetest.register_node("australia:cauliflower_coral_pink", {
 	},
 })
 
+	-- Acropora millepora: Cluster Coral (green)
+minetest.register_node("australia:cluster_coral_green", {
+	description = "Acropora millepora: Cluster Coral",
+	drawtype = "plantlike",
+	tiles = {"aus_cluster_coral_green.png"},
+	inventory_image = "aus_cluster_coral_green.png",
+	wield_image = "aus_cluster_coral_green.png",
+	paramtype = "light",
+	walkable = false,
+	climable = true,
+	drowning = 1,
+	is_ground_content = true,
+	groups = {cracky = 3, coral = 1, stone = 1, attached_node = 1, sea = 1},
+	sounds = default.node_sound_stone_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+	},
+})
+
+	-- Acropora millepora: Cluster Coral (orange)
+minetest.register_node("australia:cluster_coral_orange", {
+	description = "Acropora millepora: Cluster Coral",
+	drawtype = "plantlike",
+	tiles = {"aus_cluster_coral_orange.png"},
+	inventory_image = "aus_cluster_coral_orange.png",
+	wield_image = "aus_cluster_coral_orange.png",
+	paramtype = "light",
+	walkable = false,
+	climable = true,
+	drowning = 1,
+	is_ground_content = true,
+	groups = {cracky = 3, coral = 1, stone = 1, attached_node = 1, sea = 1},
+	sounds = default.node_sound_stone_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+	},
+})
+
+	-- Acropora millepora: Cluster Coral (purple)
+minetest.register_node("australia:cluster_coral_purple", {
+	description = "Acropora millepora: Cluster Coral",
+	drawtype = "plantlike",
+	tiles = {"aus_cluster_coral_purple.png"},
+	inventory_image = "aus_cluster_coral_purple.png",
+	wield_image = "aus_cluster_coral_purple.png",
+	paramtype = "light",
+	walkable = false,
+	climable = true,
+	drowning = 1,
+	is_ground_content = true,
+	groups = {cracky = 3, coral = 1, stone = 1, attached_node = 1, sea = 1},
+	sounds = default.node_sound_stone_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+	},
+})
+
 	-- Acropora cervicornis: Staghorn Coral (blue)
 minetest.register_node("australia:staghorn_coral_blue", {
 	description = "Acropora cervicornis: Staghorn Coral",
@@ -1171,6 +1308,102 @@ minetest.register_node("australia:staghorn_coral_yellow", {
 	is_ground_content = true,
 	groups = {cracky = 3, coral = 1, stone = 1, attached_node = 1, sea = 1},
 	sounds = default.node_sound_stone_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+	},
+})
+
+	-- Acabaria sp.: Sea Fan
+minetest.register_node("australia:seafan_coral", {
+	description = "Acabaria sp.: Sea Fan",
+	drawtype = "plantlike",
+	waving = 0,
+	visual_scale = 1.0,
+	tiles = {"aus_seafan_coral.png"},
+	inventory_image = "aus_seafan_coral.png",
+	wield_image = "aus_seafan_coral.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = false,
+	climable = true,
+	buildable_to = false,
+	drowning = 1,
+	is_ground_content = true,
+	groups = {snappy = 3, coral = 1, attached_node = 1, sea = 1},
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+	},
+})
+
+	-- Euphyllia ancora: Hammer coral
+minetest.register_node("australia:hammer_coral", {
+	description = "Euphyllia ancora: Hammer coral",
+	drawtype = "plantlike",
+	waving = 0,
+	visual_scale = 1.0,
+	tiles = {"aus_hammer_coral.png"},
+	inventory_image = "aus_hammer_coral.png",
+	wield_image = "aus_hammer_coral.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = false,
+	climable = true,
+	buildable_to = false,
+	drowning = 1,
+	is_ground_content = true,
+	groups = {snappy = 3, coral = 1, attached_node = 1, sea = 1},
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+	},
+})
+
+	-- Pipestela candelabra: Bob Marley Sponge
+minetest.register_node("australia:tube_sponge", {
+	description = "Pipestela candelabra: Bob Marley Sponge",
+	drawtype = "plantlike",
+	waving = 0,
+	visual_scale = 1.0,
+	tiles = {"aus_tube_sponge.png"},
+	inventory_image = "aus_tube_sponge.png",
+	wield_image = "aus_tube_sponge.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = false,
+	climable = true,
+	buildable_to = false,
+	drowning = 1,
+	is_ground_content = true,
+	groups = {snappy = 3, coral = 1, attached_node = 1, sea = 1},
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+	},
+})
+
+	-- Halodule uninervis: Narrowleaf Seagrass
+minetest.register_node("australia:sea_grass", {
+	description = "Halodule uninervis: Narrowleaf Seagrass",
+	drawtype = "plantlike",
+	waving = 1,
+	visual_scale = 1.0,
+	tiles = {"aus_sea_grass.png"},
+	inventory_image = "aus_sea_grass.png",
+	wield_image = "aus_sea_grass.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = false,
+	climable = true,
+	buildable_to = false,
+	drowning = 1,
+	is_ground_content = true,
+	groups = {snappy = 3, attached_node = 1, sea = 1},
+	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
@@ -1279,6 +1512,124 @@ minetest.register_node("australia:muddy_river_water_flowing", {
 --
 -- Tools / "Advanced" crafting / Non-"natural"
 --
+
+minetest.register_node("australia:woodshipchest", {
+	description = "Wooden ship chest",
+	tiles = {"default_chest_top.png", "default_chest_top.png", "default_chest_side.png",
+		"default_chest_side.png", "default_chest_side.png", "default_chest_front.png"},
+	paramtype2 = "facedir",
+	groups = {choppy=2,oddly_breakable_by_hand=2, not_in_creative_inventory=1},
+	drop = 'default:chest',
+	legacy_facedir_simple = true,
+	is_ground_content = false,
+	sounds = default.node_sound_wood_defaults(),
+	on_construct = function(pos)
+		local meta = minetest.get_meta(pos)
+		meta:set_string("formspec",
+			"size[8,9]"..
+			"list[current_name;main;0,0;8,4;]"..
+			"list[current_player;main;0,5;8,4;]")
+		meta:set_string("infotext", "Woodship chest")
+		local inv = meta:get_inventory()
+		inv:set_size("main", 8*4)
+	local contents = {}
+	if math.random(1,100) <= 25 then
+		contents = {main = {[1] = "default:coal_lump 36"}}
+	elseif math.random(1,100) >= 26 or math.random(1,100) <= 40 then
+		contents = {main = {[1] = "default:iron_lump 24"}}
+	elseif math.random(1,100) >= 41 or math.random(1,100) <= 45 then
+		contents = {main = {[1] = "default:gold_lump 24"}}
+	elseif math.random(1,100) >= 46 or math.random(1,100) <= 50 then
+		contents = {main = {[1] = "default:diamond 24"}}
+	elseif math.random(1,100) >= 51 or math.random(1,100) <= 60 then
+		contents = {main = {[1] = "australia:huon_pine_tree 18"}}
+	elseif math.random(1,100) >= 61 or math.random(1,100) <= 70 then
+		contents = {main = {[1] = "australia:jarrah_tree 18"}}
+	elseif math.random(1,100) >= 71 or math.random(1,100) <= 80 then
+		contents = {main = {[1] = "australia:marri_tree 18"}}
+	elseif math.random(1,100) >= 81 or math.random(1,100) <= 90 then
+		contents = {main = {[1] = "australia:merbau_tree 18"}}
+	else
+		contents = {main = {[1] = "australia:river_red_gum_tree 18"}}
+	end
+meta:from_table({
+	inventory = contents,
+	fields = {
+	formspec = "size[8,9;]list[context;main;0,0;8,4;]list[current_player;main;0,5;8,4;]",
+	infotext = "Normal chest"
+	}
+})
+	end,
+	can_dig = function(pos,player)
+		local meta = minetest.get_meta(pos);
+		local inv = meta:get_inventory()
+		return inv:is_empty("main")
+	end,
+	on_metadata_inventory_move = function(pos, from_list, from_index, to_list, to_index, count, player)
+		minetest.log("action", player:get_player_name()..
+				" moves stuff in chest at "..minetest.pos_to_string(pos))
+	end,
+	on_metadata_inventory_put = function(pos, listname, index, stack, player)
+		minetest.log("action", player:get_player_name()..
+				" moves stuff to chest at "..minetest.pos_to_string(pos))
+	end,
+	on_metadata_inventory_take = function(pos, listname, index, stack, player)
+		minetest.log("action", player:get_player_name()..
+				" takes stuff from chest at "..minetest.pos_to_string(pos))
+	end,
+})
+
+minetest.register_node("australia:submarinechest", {
+	description = "U-boot chest",
+	tiles = {"default_chest_top.png", "default_chest_top.png", "default_chest_side.png",
+		"default_chest_side.png", "default_chest_side.png", "default_chest_front.png"},
+	paramtype2 = "facedir",
+	groups = {choppy=2,oddly_breakable_by_hand=2, not_in_creative_inventory=1},
+	drop = 'default:chest',
+	legacy_facedir_simple = true,
+	is_ground_content = false,
+	sounds = default.node_sound_wood_defaults(),
+	on_construct = function(pos)
+		local meta = minetest.get_meta(pos)
+		meta:set_string("formspec",
+			"size[8,9]"..
+			"list[current_name;main;0,0;8,4;]"..
+			"list[current_player;main;0,5;8,4;]")
+		meta:set_string("infotext", "U-boot chest")
+		local inv = meta:get_inventory()
+		inv:set_size("main", 8*4)
+	local contents = {}
+	if math.random(1,2) == 1 and minetest.get_modpath("technic_worldgen") then
+		contents = {main = {[1] = "technic:mineral_uranium 18", [2] = "default:sword_steel 2"}}
+	else
+		contents = {main = {[1] = "tnt:tnt 3", [2] = "default:sword_steel 2"}}
+	end
+meta:from_table({
+	inventory = contents,
+	fields = {
+	formspec = "size[8,9;]list[context;main;0,0;8,4;]list[current_player;main;0,5;8,4;]",
+	infotext = "Normal chest"
+	}
+})
+	end,
+	can_dig = function(pos,player)
+		local meta = minetest.get_meta(pos);
+		local inv = meta:get_inventory()
+		return inv:is_empty("main")
+	end,
+	on_metadata_inventory_move = function(pos, from_list, from_index, to_list, to_index, count, player)
+		minetest.log("action", player:get_player_name()..
+				" moves stuff in chest at "..minetest.pos_to_string(pos))
+	end,
+	on_metadata_inventory_put = function(pos, listname, index, stack, player)
+		minetest.log("action", player:get_player_name()..
+				" moves stuff to chest at "..minetest.pos_to_string(pos))
+	end,
+	on_metadata_inventory_take = function(pos, listname, index, stack, player)
+		minetest.log("action", player:get_player_name()..
+				" takes stuff from chest at "..minetest.pos_to_string(pos))
+	end,
+})
 
 
 

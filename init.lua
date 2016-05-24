@@ -2,7 +2,7 @@
 
 -- MOD: australia
 -- See README.md for licensing and other information.
--- Designed for valleys mapgen in Minetest 0.4.13-dev, but will work with mgv5,
+-- Designed for valleys mapgen in Minetest 0.4.14, but will work with mgv5,
 -- mgv7, flat and fractal with limitations.
 
 -- Check for necessary mod functions and abort if they aren't available.
@@ -22,11 +22,11 @@ aus.schematics = {}
 
 -- Set the following to 1 to enable biome or 0 to disable
 aus.biome_underground				= 1
-aus.biome_mangroves					= 1
-aus.biome_tasman_sea				= 1
-aus.biome_great_australian_bight	= 1
-aus.biome_indian_ocean				= 1
-aus.biome_great_barrier_reef		= 1
+aus.biome_mangroves					= 0
+aus.biome_tasman_sea				= 0
+aus.biome_great_australian_bight	= 0
+aus.biome_indian_ocean				= 0
+aus.biome_great_barrier_reef		= 0
 aus.biome_timor_sea					= 1
 aus.biome_jarrah_karri_forests		= 1
 aus.biome_eastern_coasts			= 1

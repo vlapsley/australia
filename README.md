@@ -1,5 +1,5 @@
 # Australia
-A mod for Minetest 0.4.13-dev. Work in progress.
+A mod for Minetest 0.4.14. Work in progress.
 Created by vlapsley.
 
 ![Screenshot](https://raw.githubusercontent.com/vlapsley/australia/master/screenshot.png)
@@ -76,19 +76,19 @@ The highest parts of the Great Dividing Range.
 
 ## To-do list
 * Redo some tree textures, especially wood. Some of them are great, some are awful.
-* Finish corals in Great Barrier Reef.
 * Opals in Central Australia biome.
-* Work out way to place some tree and plants along rivers.
+* Work out way to place some trees and plants along rivers.
 * Salt lakes in Central Australia biome.
 * Adjust tree and plant distribution.
 * Adjust tree size and leaf functions.
 * Add some rocky beaches.
 * Add some river/lake plants, especially to Arnhem land biome.
-* Add red terra rossa soil and grape vines in the Flinders-Lofty biome. Red/white wine.
+* Add terra rossa soil and grape vines in the Flinders-Lofty biome. Red/white wine.
 * Add more logs.
 * Add moss on trees.
 * Palm trees in FNQ and Arnhem land beaches.
 * Add support for survival mod/game.
+* Add support for a mobs mod - Great White Shark, Tiger Shark, Saltwater Crocodile, Brown Snake, Tiger Snake, Emu, Kangaroo.
 
 ## Installation
 
@@ -104,7 +104,7 @@ The highest parts of the Great Dividing Range.
 
 ## Use
 ### Mapgen compatibility
-The Australia mod has been designed specifically for the Valleys mapgen, currently in Minetest 0.4.13-dev.
+The Australia mod has been designed specifically for the Valleys mapgen, currently in Minetest 0.4.14.
 It will work with mapgens v5, v7, flat and fractal, but it won't be as visually appealing.
 The rivers and temperature/humidity of the Valleys mapgen play a vital role in getting the feel of the Australia mod just right.
 
@@ -114,6 +114,12 @@ This will also disable plants, trees and more that are unique to that biome.
 All biomes are enabled by default. Currently, disabling the *Underground* biome will have no effect.
 
 ## Changelog
+### 0.4 (2016-05-24)
+* Added new corals and sea grass.
+* Replaced coral sand with coral stone.
+* Added sunken woodships and submarines with variable "loot".
+* Fixed an issue with the rainforest tree schematic causing Minetest 0.4.14 to crash on startup.
+
 ### 0.3.1 (2016-04-22)
 * Changed ore distribution to use minetest.register_ore function.
 * Added uranium in two biomes if technic_worldgen mod is enabled.
@@ -139,8 +145,9 @@ All biomes are enabled by default. Currently, disabling the *Underground* biome 
 ## Credits
 ### Code
 * Original tree code adapted from Gael-de-Sailly [GNU GPLv3](http://www.gnu.org/licenses/gpl-3.0.en.html), original source can be found at [](https://github.com/Gael-de-Sailly/valleys_mapgen) and duane-r [BSD license](https://en.wikipedia.org/wiki/Bsd_license).
-* Tree schematic creation code by duane-r [BSD license](https://en.wikipedia.org/wiki/Bsd_license).
-* noairblocks.lua : Code modified from Duane Robertson's [valleys_c](https://github.com/duane-r/valleys_c) mod. Original code modified from Perttu Ahola's [noairblocks](https://forum.minetest.net/viewtopic.php?id=4627) mod and released as LGPL 2.1.
+* Original tree schematic creation code modified by vlapsley and orginal by duane-r [BSD license](https://en.wikipedia.org/wiki/Bsd_license).
+* noairblocks.lua : Code modified from Duane Robertson's [valleys_c](https://github.com/duane-r/valleys_c) mod. Original code modified from Perttu Ahola's [noairblocks](https://forum.minetest.net/viewtopic.php?id=4627) mod and released as [LGPL 2.1](http://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html).
+* Sunken woodship and submarine code modified by vlapsley and original copyright (C) 2011-2012 by celeron55, Perttu Ahola <celeron55@gmail.com>, (https://creativecommons.org/licenses/by-sa/3.0/legalcode)   [GNU Lesser General Public License](http://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html) as published by the Free Software Foundation; either version 2.1 of the License, or (at your option) any later version.
 
 ### Sounds
 * [Mangrove mud](http://www.freesound.org/people/dobroide/sounds/16771) copyright (C) 2006 by dobroide, [CC by 3.0](https://creativecommons.org/licenses/by/3.0/legalcode)
@@ -148,6 +155,5 @@ All biomes are enabled by default. Currently, disabling the *Underground* biome 
 ### Textures
 * Moss textures by Neuromancer, [WTFPL](https://en.wikipedia.org/wiki/WTFPL).
 * Fern textures by Mossmanikin, [WTFPL](https://en.wikipedia.org/wiki/WTFPL).
-* Giant Kelp textures copyright (C) 2012 by Perttu Ahola, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/legalcode).
-* Coral sand by duane-r [BSD license](https://en.wikipedia.org/wiki/Bsd_license).
+* Giant Kelp textures copyright (C) 2012 by celeron55, Perttu Ahola, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/legalcode).
 * All other textures by demon_boy [github](https://github.com/vlapsley), except those from default game.

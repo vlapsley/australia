@@ -399,7 +399,6 @@ end
 	-- Merbau
 aus.schematics.merbau_tree = {}
 local max_ht = 12
-local ht = 8
 local r = 8
 local tree = "australia:merbau_tree"
 local leaves = "australia:merbau_leaves"
