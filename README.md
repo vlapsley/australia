@@ -156,4 +156,5 @@ All biomes are enabled by default. Currently, disabling the *Underground* biome 
 * Moss textures by Neuromancer, [WTFPL](https://en.wikipedia.org/wiki/WTFPL).
 * Fern textures by Mossmanikin, [WTFPL](https://en.wikipedia.org/wiki/WTFPL).
 * Giant Kelp textures copyright (C) 2012 by celeron55, Perttu Ahola, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/legalcode).
-* All other textures by demon_boy [github](https://github.com/vlapsley), except those from default game.
+* Textures from Minetest Game, Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0), http://creativecommons.org/licenses/by-sa/3.0/
+* All other textures by demon_boy [github](https://github.com/vlapsley), Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0), http://creativecommons.org/licenses/by-sa/3.0/
