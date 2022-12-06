@@ -152,6 +152,7 @@ function aus.generate(minp, maxp, seed)
 							end
 						end
 					end
+				end
 
 				-- Extra resources in ground per biome.
 				if y < ground and (data[index_3d] == node["air"] or data[index_3d] == node["river_water_source"] or data[index_3d] == node["muddy_river_water_source"] or data[index_3d] == node["water_source"]) then
