@@ -76,7 +76,7 @@ local tree = "australia:coolabah_tree"
 local leaves = "australia:coolabah_leaves"
 for r = 4,max_r do
 	local schem = aus.generate_tree_schematic(3, {x=r, y=ht, z=r}, tree, leaves, fruit, limbs)
-	push(aus.schematics.coolabah_tree, schem)
+	table.insert(aus.schematics.coolabah_tree, schem)
 	minetest.register_decoration({
 		deco_type = "schematic",
 		sidelen = 80,
@@ -101,7 +101,7 @@ local tree = "australia:quandong_tree"
 local leaves = "australia:quandong_leaves"
 for r = 3,max_r do
 	local schem = aus.generate_tree_schematic(2, {x=r, y=ht, z=r}, tree, leaves, fruit, limbs)
-	push(aus.schematics.quandong_tree, schem)
+	table.insert(aus.schematics.quandong_tree, schem)
 	minetest.register_decoration({
 		deco_type = "schematic",
 		sidelen = 80,
@@ -126,7 +126,7 @@ local tree = "australia:mulga_tree"
 local leaves = "australia:mulga_leaves"
 for r = 3,max_r do
 	local schem = aus.generate_tree_schematic(2, {x=r, y=ht, z=r}, tree, leaves, fruit, limbs)
-	push(aus.schematics.mulga_tree, schem)
+	table.insert(aus.schematics.mulga_tree, schem)
 	minetest.register_decoration({
 		deco_type = "schematic",
 		sidelen = 80,
@@ -151,7 +151,7 @@ local tree = "australia:river_oak_tree"
 local leaves = "australia:river_oak_leaves"
 for r = 4,max_r do
 	local schem = aus.generate_tree_schematic(3, {x=r, y=ht, z=r}, tree, leaves, fruit, limbs)
-	push(aus.schematics.river_oak_big_tree, schem)
+	table.insert(aus.schematics.river_oak_big_tree, schem)
 	minetest.register_decoration({
 		deco_type = "schematic",
 		sidelen = 80,
@@ -176,7 +176,7 @@ local tree = "australia:river_red_gum_tree"
 local leaves = "australia:river_red_gum_leaves"
 for r = 10,max_r do
 	local schem = aus.generate_giant_tree_schematic(7, {x=r, y=ht, z=r}, tree, leaves, fruit, limbs)
-	push(aus.schematics.river_red_gum_tree, schem)
+	table.insert(aus.schematics.river_red_gum_tree, schem)
 	minetest.register_decoration({
 		deco_type = "schematic",
 		sidelen = 80,
@@ -201,7 +201,7 @@ local tree = "australia:shoestring_acacia_tree"
 local leaves = "australia:shoestring_acacia_leaves"
 for r = 2,max_r do
 	local schem = aus.generate_tree_schematic(3, {x=r, y=ht, z=r}, tree, leaves, fruit, limbs)
-	push(aus.schematics.shoestring_acacia_tree, schem)
+	table.insert(aus.schematics.shoestring_acacia_tree, schem)
 	minetest.register_decoration({
 		deco_type = "schematic",
 		sidelen = 80,

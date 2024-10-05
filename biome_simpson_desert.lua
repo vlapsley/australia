@@ -43,7 +43,7 @@ local tree = "australia:coolabah_tree"
 local leaves = "australia:coolabah_leaves"
 for r = 4,max_r do
 	local schem = aus.generate_tree_schematic(3, {x=r, y=ht, z=r}, tree, leaves, fruit, limbs)
-	push(aus.schematics.coolabah_tree, schem)
+	table.insert(aus.schematics.coolabah_tree, schem)
 	minetest.register_decoration({
 		deco_type = "schematic",
 		sidelen = 80,
@@ -68,7 +68,7 @@ local tree = "australia:quandong_tree"
 local leaves = "australia:quandong_leaves"
 for r = 3,max_r do
 	local schem = aus.generate_tree_schematic(2, {x=r, y=ht, z=r}, tree, leaves, fruit, limbs)
-	push(aus.schematics.quandong_tree, schem)
+	table.insert(aus.schematics.quandong_tree, schem)
 	minetest.register_decoration({
 		deco_type = "schematic",
 		sidelen = 80,

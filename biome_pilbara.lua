@@ -119,7 +119,7 @@ local tree = "australia:desert_oak_tree"
 local leaves = "australia:desert_oak_leaves"
 for r = 6,max_r do
 	local schem = aus.generate_tree_schematic(6, {x=r, y=ht, z=r}, tree, leaves, fruit, limbs)
-	push(aus.schematics.desert_oak_tree, schem)
+	table.insert(aus.schematics.desert_oak_tree, schem)
 	minetest.register_decoration({
 		deco_type = "schematic",
 		sidelen = 80,
