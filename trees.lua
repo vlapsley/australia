@@ -439,3 +439,4 @@ function aus.generate_conifer_schematic(trunk_height, radius, trunk, leaf, fruit
 	return s
 end
 
+dofile(aus.path.."/trees/waratah.lua")
