@@ -104,7 +104,7 @@ local tree = "australia:snow_gum_tree"
 local leaves = "australia:snow_gum_leaves"
 for r = 3,max_r do
 	local schem = aus.generate_tree_schematic(1, {x=r, y=ht, z=r}, tree, leaves, fruit, limbs)
-	push(aus.schematics.snow_gum_tree, schem)
+	table.insert(aus.schematics.snow_gum_tree, schem)
 	minetest.register_decoration({
 		deco_type = "schematic",
 		sidelen = 80,

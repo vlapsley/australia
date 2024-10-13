@@ -105,7 +105,7 @@ aus.saplings = {
 -- create a list of just the node names
 local sapling_list = {}
 for _, sap in pairs(aus.saplings) do
-	push(sapling_list, sap.sapling)
+	table.insert(sapling_list, sap.sapling)
 end
 
 -- This abm can handle all saplings.

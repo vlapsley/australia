@@ -135,7 +135,7 @@ local tree = "australia:cloncurry_box_tree"
 local leaves = "australia:cloncurry_box_leaves"
 for r = 5,max_r do
 	local schem = aus.generate_tree_schematic(3, {x=r, y=ht, z=r}, tree, leaves, fruit, limbs)
-	push(aus.schematics.cloncurry_box_tree, schem)
+	table.insert(aus.schematics.cloncurry_box_tree, schem)
 	minetest.register_decoration({
 		deco_type = "schematic",
 		sidelen = 80,
@@ -160,7 +160,7 @@ local tree = "australia:darwin_woollybutt_tree"
 local leaves = "australia:darwin_woollybutt_leaves"
 for r = 3,max_r do
 	local schem = aus.generate_tree_schematic(6, {x=r, y=ht, z=r}, tree, leaves, fruit, limbs)
-	push(aus.schematics.darwin_woollybutt_tree, schem)
+	table.insert(aus.schematics.darwin_woollybutt_tree, schem)
 	minetest.register_decoration({
 		deco_type = "schematic",
 		sidelen = 80,
@@ -185,7 +185,7 @@ local tree = "australia:river_oak_tree"
 local leaves = "australia:river_oak_leaves"
 for r = 3,max_r do
 	local schem = aus.generate_tree_schematic(2, {x=r, y=ht, z=r}, tree, leaves, fruit, limbs)
-	push(aus.schematics.river_oak_small_tree, schem)
+	table.insert(aus.schematics.river_oak_small_tree, schem)
 	minetest.register_decoration({
 		deco_type = "schematic",
 		sidelen = 80,

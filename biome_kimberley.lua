@@ -112,7 +112,7 @@ local tree = "australia:boab_tree"
 local leaves = "australia:boab_leaves"
 for r = 3,max_r do
 	local schem = aus.generate_giant_tree_schematic(3, {x=r, y=ht, z=r}, tree, leaves, fruit, limbs)
-	push(aus.schematics.boab_tree, schem)
+	table.insert(aus.schematics.boab_tree, schem)
 	minetest.register_decoration({
 		deco_type = "schematic",
 		sidelen = 80,
@@ -137,7 +137,7 @@ local tree = "australia:darwin_woollybutt_tree"
 local leaves = "australia:darwin_woollybutt_leaves"
 for r = 3,max_r do
 	local schem = aus.generate_tree_schematic(6, {x=r, y=ht, z=r}, tree, leaves, fruit, limbs)
-	push(aus.schematics.darwin_woollybutt_tree, schem)
+	table.insert(aus.schematics.darwin_woollybutt_tree, schem)
 	minetest.register_decoration({
 		deco_type = "schematic",
 		sidelen = 80,
@@ -162,7 +162,7 @@ local tree = "australia:swamp_bloodwood_tree"
 local leaves = "australia:swamp_bloodwood_leaves"
 for r = 3,max_r do
 	local schem = aus.generate_tree_schematic(3, {x=r, y=ht, z=r}, tree, leaves, fruit, limbs)
-	push(aus.schematics.swamp_bloodwood_tree, schem)
+	table.insert(aus.schematics.swamp_bloodwood_tree, schem)
 	minetest.register_decoration({
 		deco_type = "schematic",
 		sidelen = 80,

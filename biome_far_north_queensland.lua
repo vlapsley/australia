@@ -283,7 +283,7 @@ local tree = "australia:daintree_stringybark_tree"
 local leaves = "australia:daintree_stringybark_leaves"
 for r = 6,max_r do
 	local schem = aus.generate_tree_schematic(9, {x=r, y=ht, z=r}, tree, leaves, fruit, limbs)
-	push(aus.schematics.daintree_stringybark_tree, schem)
+	table.insert(aus.schematics.daintree_stringybark_tree, schem)
 	minetest.register_decoration({
 		deco_type = "schematic",
 		sidelen = 80,
@@ -308,7 +308,7 @@ local tree = "australia:darwin_woollybutt_tree"
 local leaves = "australia:darwin_woollybutt_leaves"
 for r = 3,max_r do
 	local schem = aus.generate_tree_schematic(6, {x=r, y=ht, z=r}, tree, leaves, fruit, limbs)
-	push(aus.schematics.darwin_woollybutt_tree, schem)
+	table.insert(aus.schematics.darwin_woollybutt_tree, schem)
 	minetest.register_decoration({
 		deco_type = "schematic",
 		sidelen = 80,
@@ -331,7 +331,7 @@ local tree = "australia:fan_palm_tree"
 local leaves = "australia:fan_palm_leaves"
 for h = 9,max_ht do
 	local schem = aus.generate_fanpalm_tree_schematic(max_ht, r, tree, leaves)
-	push(aus.schematics.fan_palm_tree, schem)
+	table.insert(aus.schematics.fan_palm_tree, schem)
 	minetest.register_decoration({
 		deco_type = "schematic",
 		sidelen = 80,
@@ -356,7 +356,7 @@ local tree = "australia:lemon_eucalyptus_tree"
 local leaves = "australia:lemon_eucalyptus_leaves"
 for r = 4,max_r do
 	local schem = aus.generate_tree_schematic(8, {x=r, y=ht, z=r}, tree, leaves, fruit, limbs)
-	push(aus.schematics.lemon_eucalyptus_tree, schem)
+	table.insert(aus.schematics.lemon_eucalyptus_tree, schem)
 	minetest.register_decoration({
 		deco_type = "schematic",
 		sidelen = 80,
@@ -381,7 +381,7 @@ local tree = "australia:lilly_pilly_tree"
 local leaves = "australia:lilly_pilly_leaves"
 for r = 4,max_r do
 	local schem = aus.generate_tree_schematic(1, {x=r, y=ht, z=r}, tree, leaves, fruit, limbs)
-	push(aus.schematics.lilly_pilly_tree, schem)
+	table.insert(aus.schematics.lilly_pilly_tree, schem)
 	minetest.register_decoration({
 		deco_type = "schematic",
 		sidelen = 80,
@@ -404,7 +404,7 @@ local tree = "australia:merbau_tree"
 local leaves = "australia:merbau_leaves"
 for h = 8,max_ht do
 	local schem = aus.generate_rainforest_tree_schematic(max_ht, r, tree, leaves)
-	push(aus.schematics.merbau_tree, schem)
+	table.insert(aus.schematics.merbau_tree, schem)
 	minetest.register_decoration({
 		deco_type = "schematic",
 		sidelen = 80,
@@ -429,7 +429,7 @@ local tree = "australia:river_oak_tree"
 local leaves = "australia:river_oak_leaves"
 for r = 4,max_r do
 	local schem = aus.generate_tree_schematic(3, {x=r, y=ht, z=r}, tree, leaves, fruit, limbs)
-	push(aus.schematics.river_oak_big_tree, schem)
+	table.insert(aus.schematics.river_oak_big_tree, schem)
 	minetest.register_decoration({
 		deco_type = "schematic",
 		sidelen = 80,
