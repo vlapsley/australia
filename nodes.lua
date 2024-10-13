@@ -542,6 +542,7 @@ minetest.register_node("australia:fern_trunk", {
 		"aus_fern_trunk_top.png",
 		"aus_fern_trunk.png"
 	},
+	use_texture_alpha = "clip",
 	node_box = {
 		type = "fixed",
 		fixed = {-1/8, -1/2, -1/8, 1/8, 1/2, 1/8},
@@ -628,6 +629,7 @@ minetest.register_node("australia:tree_fern_leaf_big_end", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = { "aus_tree_fern_leaf_big_end.png" },
+	use_texture_alpha = "clip",
 	walkable = false,
 	node_box = {
 		type = "fixed",
@@ -657,6 +659,7 @@ minetest.register_node("australia:fern_trunk_big_top", {
 		"aus_fern_trunk_big_top.png^aus_tree_fern_leaf_big_cross.png",
 		"aus_fern_trunk_big.png"
 	},
+	use_texture_alpha = "clip",
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -691,6 +694,7 @@ minetest.register_node("australia:fern_trunk_big", {
 		"aus_fern_trunk_big_top.png",
 		"aus_fern_trunk_big.png"
 	},
+	use_texture_alpha = "clip",
 	node_box = {
 		type = "fixed",
 		fixed = {-1/4, -1/2, -1/4, 1/4, 1/2, 1/4},
@@ -825,6 +829,7 @@ minetest.register_node("australia:mangrove_palm_leaf_bot", {
 		"aus_mangrove_palm_leaf_bot.png"},
 	inventory_image = "aus_mangrove_palm_leaf_bot.png",
 	wield_image = "aus_mangrove_palm_leaf_bot.png",
+	use_texture_alpha = "clip",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {snappy = 3, flammable = 2, flora = 1, attached_node = 1},
@@ -846,6 +851,7 @@ minetest.register_node("australia:mangrove_palm_leaf_top", {
 		"aus_mangrove_palm_leaf_top.png"},
 	inventory_image = "aus_mangrove_palm_leaf_top.png",
 	wield_image = "aus_mangrove_palm_leaf_top.png",
+	use_texture_alpha = "clip",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {snappy = 3, flammable = 2, flora = 1, attached_node = 1},
@@ -1648,6 +1654,7 @@ minetest.register_node("australia:moss", {
 	sunlight_propagates = true,
 	walkable = false,
 	buildable_to = false,
+	use_texture_alpha = "clip",
 	node_box = {
 		type = "fixed",
 		fixed = {-0.5, -0.5, -0.5, 0.5, -0.46875, 0.5}
@@ -1671,6 +1678,7 @@ minetest.register_node("australia:moss_with_fungus", {
 	sunlight_propagates = true,
 	walkable = false,
 	buildable_to = false,
+	use_texture_alpha = "clip",
 	node_box = {
 		type = "fixed",
 		fixed = {-0.5, -0.5, -0.5, 0.5, -0.46875, 0.5}
