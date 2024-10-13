@@ -255,7 +255,7 @@ function aus.generate_big_tree_schematic(trunk_height, radii, trunk, leaf, fruit
 	local s = aus.schematic_array(width, height, width)
 
 	-- the main trunk
-	for y = -1,trunk_top do
+	for y = 0,trunk_top do
 		local i = radii.z*width*height + y*width + radii.x + 1
 		s.data[i].name = trunk
 		s.data[i].param1 = 255
@@ -323,7 +323,7 @@ function aus.generate_giant_tree_schematic(trunk_height, radii, trunk, leaf, fru
 	local s = aus.schematic_array(width, height, width)
 
 	-- the main trunk
-	for y = -1,trunk_top do
+	for y = 0,trunk_top do
 		local i = radii.z*width*height + y*width + radii.x + 1
 		s.data[i].name = trunk
 		s.data[i].param1 = 255
