@@ -993,21 +993,6 @@ minetest.register_node("australia:spinifex", {
 	},
 })
 
-	-- Telopea speciosissima: Waratah
-minetest.register_node("australia:waratah", {
-	description = "Telopea speciosissima: Waratah",
-	drawtype = "allfaces_optional",
-	visual_scale = 1.0,
-	tiles = { "aus_waratah.png"},
-	inventory_image = "aus_waratah.png",
-	wield_image = "aus_waratah.png",
-	paramtype = "light",
-	sunlight_propagates = true,
-	is_ground_content = true,
-	groups = {snappy = 3, flammable = 2, flora = 1, attached_node = 1},
-	sounds = default.node_sound_leaves_defaults(),
-})
-
 	-- Ecklonia radiata: Common Kelp
 minetest.register_node("australia:kelp_brown", {
 	description = "Ecklonia radiata: Common Kelp",
