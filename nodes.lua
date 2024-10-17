@@ -826,7 +826,7 @@ minetest.register_node("australia:mangrove_palm_trunk", {
 minetest.register_node("australia:mangrove_palm_leaves", {
 	description = "Nypa fruticans: Mangrove Palm Leaves",
 	drawtype = "mesh",
-	mesh = "nypa_fruticans_leaves.obj",
+	mesh = "aus_nypa_fruticans_leaves.obj",
 	tiles = {"aus_mangrove_palm_leaves.png"},
 	inventory_image = "aus_mangrove_palm_leaves.png",
 	wield_image = "aus_mangrove_palm_leaves.png",
