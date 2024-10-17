@@ -802,7 +802,7 @@ minetest.register_node("australia:mangrove_lily", {
 
 	-- Nypa fruticans: Mangrove Palm
 minetest.register_node("australia:mangrove_palm_trunk", {
-	description = "Nypa fruticans: Mangrove Fern",
+	description = "Nypa fruticans: Mangrove Palm Trunk",
 	tiles = {"aus_mangrove_palm_trunk.png", "aus_mangrove_mud.png",
 		"aus_mangrove_palm_trunk.png"},
 	inventory_image = "aus_mangrove_palm_trunk.png",
@@ -823,49 +823,36 @@ minetest.register_node("australia:mangrove_palm_trunk", {
 	},
 })
 
-minetest.register_node("australia:mangrove_palm_leaf_bot", {
-	description = "Nypa fruticans: Mangrove Fern",
-	tiles = {"aus_mangrove_palm_leaf_bot.png", "aus_mangrove_palm_leaf_bot.png",
-		"aus_mangrove_palm_leaf_bot.png"},
-	inventory_image = "aus_mangrove_palm_leaf_bot.png",
-	wield_image = "aus_mangrove_palm_leaf_bot.png",
+minetest.register_node("australia:mangrove_palm_leaves", {
+	description = "Nypa fruticans: Mangrove Palm Leaves",
+	drawtype = "mesh",
+	mesh = "nypa_fruticans_leaves.obj",
+	tiles = {"aus_mangrove_palm_leaves.png"},
+	inventory_image = "aus_mangrove_palm_leaves.png",
+	wield_image = "aus_mangrove_palm_leaves.png",
 	use_texture_alpha = "clip",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {snappy = 3, flammable = 2, flora = 1, attached_node = 1},
 	sounds = default.node_sound_leaves_defaults(),
-	drawtype = "nodebox",
-	nodebox = {
-		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
-	},
+	walkable = false,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
 	},
+})
+minetest.register_alias("australia:mangrove_palm_leaf_bot", "australia:mangrove_palm_leaves")
+
+minetest.register_lbm({
+	label = "Remove australia:mangrove_palm_leaf_top nodes",
+	name = "australia:remove_mangrove_palm_leaf_top_nodes",
+	nodenames = {"australia:mangrove_palm_leaf_top"},
+	run_at_every_load = false,
+	action = function(pos, node, dtime_s)
+		minetest.remove_node(pos)
+	end,
 })
 
-minetest.register_node("australia:mangrove_palm_leaf_top", {
-	description = "Nypa fruticans: Mangrove Fern",
-	tiles = {"aus_mangrove_palm_leaf_top.png", "aus_mangrove_palm_leaf_top.png",
-		"aus_mangrove_palm_leaf_top.png"},
-	inventory_image = "aus_mangrove_palm_leaf_top.png",
-	wield_image = "aus_mangrove_palm_leaf_top.png",
-	use_texture_alpha = "clip",
-	paramtype = "light",
-	paramtype2 = "facedir",
-	groups = {snappy = 3, flammable = 2, flora = 1, attached_node = 1},
-	sounds = default.node_sound_leaves_defaults(),
-	drawtype = "nodebox",
-	nodebox = {
-		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
-	},
-	selection_box = {
-		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
-	},
-})
 
 	-- Banksia dallanneyi: Couch Honeypot
 minetest.register_node("australia:couch_honeypot", {
