@@ -72,12 +72,11 @@ minetest.register_decoration({
 	y_min = 1,
 	y_max = 3,
 	schematic = {
-		size = { x = 1, y = 4, z = 1},
+		size = { x = 1, y = 3, z = 1},
 		data = {
 			{ name = "ignore", param1 = 0, param2 = 0 },
 			{ name = "australia:mangrove_palm_trunk", param1 = 255, param2 = 0 },
-			{ name = "australia:mangrove_palm_leaf_bot", param1 = 255, param2 = 0 },
-			{ name = "australia:mangrove_palm_leaf_top", param1 = 255, param2 = 0 },
+			{ name = "australia:mangrove_palm_leaves", param1 = 255, param2 = 0 },
 		},
 	},
 	flags = "force_placement",
