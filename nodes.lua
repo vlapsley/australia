@@ -363,7 +363,7 @@ for i in ipairs(aus.treelist) do
 		tiles = { "aus_"..treename.."_leaves.png"},
 		paramtype = "light",
 		is_ground_content = false,
-		groups = {snappy=3,flammable=2,leaves=1},
+		groups = {snappy=3,flammable=2,leaves=1,leafdecay=3},
 		drop = {
 			max_items = 1,
 			items = {
@@ -373,6 +373,7 @@ for i in ipairs(aus.treelist) do
 		},
 		sounds = default.node_sound_leaves_defaults(),
 	})
+	local nodes_to_decay = {"australia:"..treename.."_leaves"}
 
 	-- sapling
 	minetest.register_node("australia:"..treename.."_sapling", {
@@ -396,7 +397,7 @@ for i in ipairs(aus.treelist) do
 
 	-- fruit, if applicable
 	if treefruit then
-		minetest.register_node("australia:"..treefruit.."", {
+		minetest.register_node("australia:"..treefruit, {
 			description = treefruit_desc,
 			drawtype = "plantlike",
 			visual_scale = treefruit_scale,
@@ -417,11 +418,18 @@ for i in ipairs(aus.treelist) do
 			sounds = default.node_sound_leaves_defaults(),
 			after_place_node = function(pos, placer, itemstack)
 				if placer:is_player() then
-					minetest.set_node(pos, {name="australia:"..treefruit.."", param2=1})
+					minetest.set_node(pos, {name="australia:"..treefruit, param2=1})
 				end
 			end,
 		})
+		table.insert(nodes_to_decay, "australia:"..treefruit)
 	end
+
+	default.register_leafdecay({
+		trunks = {"australia:"..treename.."_tree"},
+		leaves = nodes_to_decay,
+		radius = 4
+	})
 
 	-- fence
 	default.register_fence("australia:fence_"..treename.."_wood", {
