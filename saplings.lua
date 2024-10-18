@@ -55,10 +55,37 @@ aus.saplings = {
 	["australia:wirewood_sapling"] = {schematics=aus.schematics.wirewood_tree},
 }
 
+local function grow_sapling(pos, node_name)
+	local node_under = minetest.get_node_or_nil({x = pos.x, y = pos.y - 1, z = pos.z})
+	if not node_under or minetest.get_item_group(node_under.name, "soil") == 0 then
+		return
+	end
+
+	local sap_data = aus.saplings[node_name]
+	if not sap_data or not sap_data.schematics then
+		minetest.log("error", "No schematics for " .. node_name)
+		return
+	end
+
+	minetest.log("action", "A sapling grows into a tree at " .. minetest.pos_to_string(pos))
+
+	local schem = sap_data.schematics[math.random(1, #sap_data.schematics)]
+	local adj = {x = pos.x - math.floor(schem.size.x / 2),
+					y = pos.y - 1,
+					z = pos.z - math.floor(schem.size.z / 2)}
+	minetest.place_schematic(adj, schem, 'random', nil, true)
+end
+
 -- create a list of just the node names
 local sapling_list = {}
-for sap, _ in pairs(aus.saplings) do
-	table.insert(sapling_list, sap)
+for sap_name, _ in pairs(aus.saplings) do
+	table.insert(sapling_list, sap_name)
+
+	if bonemeal then
+		bonemeal:add_sapling({
+			{ sap_name, function(pos) grow_sapling(pos, sap_name) end, "soil" }
+		})
+	end
 end
 
 -- This abm can handle all saplings.
@@ -67,23 +94,6 @@ minetest.register_abm({
 	interval = 10,
 	chance = 50,
 	action = function(pos, node)
-		local node_under = minetest.get_node_or_nil({x = pos.x, y = pos.y - 1, z = pos.z})
-		if not node_under or minetest.get_item_group(node_under.name, "soil") == 0 then
-			return
-		end
-
-		local sap_data = aus.saplings[node.name]
-		if not sap_data or not sap_data.schematics then
-			minetest.log("error", "No schematics for " .. node.name)
-			return
-		end
-
-		minetest.log("action", "A sapling grows into a tree at " .. minetest.pos_to_string(pos))
-
-		local schem = sap_data.schematics[math.random(1, #sap_data.schematics)]
-		local adj = {x = pos.x - math.floor(schem.size.x / 2),
-					 y = pos.y - 1,
-					 z = pos.z - math.floor(schem.size.z / 2)}
-		minetest.place_schematic(adj, schem, 'random', nil, true)
+		grow_sapling(pos, node.name)
 	end,
 })
