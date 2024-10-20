@@ -29,6 +29,7 @@ aus.saplings = {
 	["australia:lilly_pilly_sapling"] = {schematics=aus.schematics.lilly_pilly_tree},
 	["australia:macadamia_sapling"] = {schematics=aus.schematics.macadamia_tree},
 	["australia:mangrove_apple_sapling"] = {schematics=aus.schematics.mangrove_apple_tree},
+	["australia:mangrove_palm_sapling"] = {schematics=aus.schematics.mangrove_palm},
 	["australia:marri_sapling"] = {schematics=aus.schematics.marri_tree},
 	["australia:merbau_sapling"] = {schematics=aus.schematics.merbau_tree},
 	["australia:moreton_bay_fig_sapling"] = {schematics=aus.schematics.moreton_bay_fig_tree},
